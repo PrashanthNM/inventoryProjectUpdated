@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Suppliers</title>
+    <link rel="stylesheet" href="{% static 'styles/admin.css' %}">
+</head>
+<body>
+    <div class="menu text-center">
+        <div class="wrapper">
+            <ul>
+                <li><a href="admins">Home</a></li>
+                <li><a href="supplier">Suppliers</a></li>
+                <li><a href="purchase">Purchase Items</a></li>
+                <li><a href="index">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="wrapper"></div>
+        <h1>ADD SUPPLIERS</h1>
+        <br/>
+
+        <form action="addsup" method="POST">{% csrf_token %}
+            <table class="tbl-31">
+
+                <tr>
+                    <td>Full Name</td>
+                    <td><input type="text", name="FullName" placeholder="Enter Name"  autocomplete="off"></td>
+                </tr>
+
+                <tr>
+                    <td>Item Name</td>
+                    <td><input type="text", name="ItemName" placeholder="Item Name" autocomplete="off"></td>
+                </tr>
+
+                <tr>
+                    <td>Invoice</td>
+                    <td><input type="text", name="invoice" placeholder="Invoice" autocomplete="off"></td>
+                </tr>
+
+            </table>
+        <input type="submit", value="save", class="btn-primary">
+
+        </form>
+        <br/><br/>
+
+            
+    </div>
+
+    <div class="footer text-center">
+        <div class="wrapper"></div>
+            <p>All rights reserved</p>
+    </div>
+</body>
+</html>

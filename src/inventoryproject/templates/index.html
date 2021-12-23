@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make a website responsive-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Connected Supply Chain</title>
+
+    <!-- Link the css file-->
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+
+    <!-- Begin Title -->
+    <section class="home text-center">
+        <div class="container">
+            <h2 class="text-center">CONNECTED SUPPLY CHAIN</h2>
+        </div>
+    </section>
+    <!-- End Title -->
+
+    <!-- Begin search section-->
+    <section class="search text-center">
+        <div class="container">
+        <form action=" " method="POST">
+            <input type="search" name="search" size= "50" placeholder="Type here to search" required>
+            <input type="submit" name="submit" value="Search" class="button">
+        </form>
+    </div>
+    <!-- End search section-->
+
+    <!-- Begin nav section-->
+    <section class="navigation">
+        <div class="container">
+            <div class="Menu text-right">
+                <ul>
+                    <li>
+                        <a href="index">Home</a>
+                    </li>
+                    <li>
+                        <a href="register">Register</a>
+                    </li>
+                    <li>
+                        <a href="login">Login</a>
+                    </li>
+                    <li>
+                        <a href="#">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- End nav section-->
+
+    <!-- Begin about section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="text-center">ABOUT</h2>
+
+            <div class="icon-box">
+                <div class="icon">
+                    <img src="{% static 'images/icon.jpg' %}" alt="about" class="img-responsive">
+                </div>
+                <div class="description">
+                    <p class="desc">
+                        Connected supply chain is one of those technologies, which is focused on innovation for enhancing the experience of each stakeholder in the system.
+                        With the fast-evolving nature of digital transformation and globalization, a connected end-to-end supply chain aims to provide comprehensive visibility and a shared view across the manufacturing enterprise, suppliers, customers, outsource partners and other trading partners. Ensuring integrated supply chain operations and management will enable manufacturers to better anticipate and serve customer requirements and supply chain demand.
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- End about section-->
+
+    <!-- Begin social media section-->
+    <section class="social">
+        <div class="container text-center">
+            <ul>
+                <li>
+                    <a href= "#"><img src="https://img.icons8.com/cute-clipart/64/000000/facebook.png"/></a>
+                </li>
+                <li>
+                    <a href= "#"><img src="https://img.icons8.com/cute-clipart/64/000000/instagram-new.png"/></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- End social media section-->
+
+</body>
+</html>

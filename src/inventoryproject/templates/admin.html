@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'styles/admin.css' %}">
+</head>
+<body>
+    <div>
+        {%for message in messages %}
+        <h3> {{message}}</h3>
+        {% endfor %}
+    </div>
+    <div class="menu text-center">
+        <div class="wrapper">
+            <ul>
+                <li><a href="admins">Home</a></li>
+                <li><a href="supplier">Suppliers</a></li>
+                <li><a href="purchase">Update Sales</a></li>
+                <li><a href="index">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="main-content">
+        
+        <div class="wrapper"></div>
+        <h1>DASHBOARD</h1>
+        <div class="col-4 text-center">
+            <h1>{{order_quantity}}</h1>
+            <br />
+            ORDER QUANTITY(items)
+        </div>
+
+        <div class="col-4 text-center">
+            <h1>{{order_cost}}</h1>
+            <br />
+            ORDER COST(rupees)
+        </div>
+
+        <div class="col-4 text-center">
+            <h1>{{sales_quantity}}</h1>
+            <br />
+            SALES QUANTITY(items)
+        </div>
+
+        <div class="col-4 text-center">
+            <h1>{{sales_cost}}</h1>
+            <br />
+            SALES COST(rupees)
+        </div>
+
+        <div class="clearfix"></div>
+
+    </div>
+
+
+    <div class="footer text-center">
+        <div class="wrapper"></div>
+        <p>All rights reserved</p>
+    </div>
+
+
+</body>
+</html>

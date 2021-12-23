@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase</title>
+    <link rel="stylesheet" href="{% static 'styles/admin.css' %}">
+</head>
+<style>
+    input[type=text],select{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+    }
+    input[type=text]{
+        width: 82%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+    }
+    input[type=submit]{
+        width: auto;
+        padding: 14px 20px;
+        background: coral;
+        color: white;
+        cursor: pointer;
+        margin-left: 25%;
+    }
+    .date{
+        margin-left: 75%;
+        
+    }
+</style>
+<body>
+    <div class="menu text-center">
+        <div class="wrapper">
+            <ul>
+                <li><a href="admins">Home</a></li>
+                <li><a href="supplier">Suppliers</a></li>
+                <li><a href="purchase">Update Sales</a></li>
+                <li><a href="index">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+   <!-- The present stock Quantity is {{present_stock_count}} -->
+
+    <div class="main-content text-center">
+       <h3 style="color:green;text-align:left;">STOCK QUANTITY : {{present_stock_count}}</h3>
+        <div class="wrapper"></div>
+        <h1>UPDATE SALES</h1>
+        <br/>
+        <input type="date" class="date" name="billdate" value="" id="date" placeholder=" " autocomplete="off">
+
+        <form action="#" method="POST">{% csrf_token %}
+            <table class="tbl-30">
+                
+                <tr>
+                    <td>Item Name</td>
+                    <td>
+                        <select name="item" id="item" onchange="change()">
+                        <option value="none" selected disabled hidden>Select an option</option>
+                        {% for i in val %}
+                            <option id="{{ i.invoice }}" value="{{i.name}}" name="{{ i.item_name }}">{{ i.item_name }}</option>
+                        {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Supplier Name</td>
+                    <td><input type="text" id="supplier" name="sname" placeholder=" " autocomplete="off"></td>    
+                </tr>
+
+                <tr>
+                    <td>Invoice</td>
+                    <td><input type="text" id="invoice" name="invoice" placeholder=" " autocomplete="off"></td>
+                </tr>
+
+                <tr>
+                    <td>Item Quantity</td>
+                    <td><input type="text", name="qty" placeholder=" " autocomplete="off"></td>
+                </tr>
+
+                <!-- <tr>
+                    <td>Bill Date</td>
+                    <td><input type="date" name="billdate" value="" id="date" placeholder=" " autocomplete="off"></td>
+                </tr> -->
+
+               
+                <script>
+                function change(){
+                    var select = document.getElementById("item");
+                    
+                    var invoice = select.options[select.selectedIndex].id;
+                    document.getElementById('invoice').value=invoice;
+
+                    var item_name = select.options[select.selectedIndex].value;
+                    document.getElementById('supplier').value=item_name;
+
+                    var x=select.options[select.selectedIndex].text;
+                    console.log(x)
+                }
+                </script>
+
+            </table>
+            <input type="submit", value="save", class="btn-primary">
+        </form>
+
+        <br/><br/>
+
+            <!-- <a href="admins" class="btn-primary" type="submit" name="submit">Purchase</a> -->
+    </div>
+    
+
+    <div class="footer text-center">
+        <div class="wrapper"></div>
+            <p>All rights reserved</p>
+    </div>
+</body>
+</html>

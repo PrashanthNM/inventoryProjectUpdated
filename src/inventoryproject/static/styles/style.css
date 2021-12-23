@@ -1,0 +1,198 @@
+
+*{
+    margin: 0,0;
+    padding: 0,0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+    width:85%;
+    margin: 0 auto;
+    padding: 1%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.img-responsive{
+    width: 100%;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+.clearfix{
+    clear: both;
+    float: none;
+}
+.text-center{
+    text-align: center;
+}
+.text-white{
+    color: white
+}
+a{
+    color: rgb(47, 39, 117);
+    text-decoration: none;
+}
+a:hover{
+    color: #0a0a0a;
+}
+.btn{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+}
+.btn-primary{
+    background-color:grey;
+    color: black;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    background-color: palevioletred;
+    color: white;
+}
+
+.button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 2px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+}
+
+h2{
+    color: rgb(8, 8, 8);
+    font-size: 2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h3{
+    font-size: 1.5rem;
+}
+
+.float-container{
+    position: relative;
+}
+.float-text{
+    position: absolute;
+    bottom: 30px;
+    left: 30%;
+}
+fieldset{
+    border: 1px solid white;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 5px;
+}
+
+
+.Menu ul{
+    list-style-type: none;
+    
+}
+
+.Menu ul li{
+    display: inline;
+    padding: 1%;
+    font-weight: bold;
+}
+
+/*Styling for Search section*/
+.home{
+    background-image: url(../images/bg.jpg);
+    background-size: cover;    
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10% 0 ;
+}
+
+.search[type="search"]{
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+
+}
+
+/*Styling for about section*/
+
+.about{
+    background-color:rgb(219, 199, 247);
+    padding: 4% 0;
+}
+.icon-box{
+    width: 100%;
+    margin: 1%;
+    padding: 1%;
+    float:left;
+    border-radius: 15px;
+
+}
+.icon{
+    width:25%;
+    float: left;
+    
+}
+.description{
+    width: 50%;
+    float: left;
+    margin-left: 8%;
+}
+
+.desc{
+    font-size: 1.2rem;
+}
+
+/*styling for social media section*/
+.social ul{
+    list-style-type: none;
+}
+.social ul li{
+    display: inline;
+    padding: 1%;
+}
+
+
+/*Making the website mobile ready*/
+@media screen and (max-width: 992px){
+    
+    .Menu ul{
+       text-align: center; 
+    }
+    .search input[type="search"]{
+        width: 90%;
+        margin: 5%;
+        padding: 2%;
+    }
+    .box-3{
+        width: 80%;
+        margin: 2% auto;
+    }
+    .about{
+        padding: 10%, 0;
+    }
+    .box-3{
+        width: 90%;
+        margin: 4% auto;
+    }
+    h2{
+        margin-bottom: 10%;
+    }
+    .icon{
+        background-color:rgb(173, 172, 171);
+        padding: 20% 0;
+
+    }
+    .icon-box{
+        width: 95%;
+        padding:5% ;
+        margin-bottom: 5%;
+    }
+    .social{
+        padding: 5% 0;
+    }
+    
+}
